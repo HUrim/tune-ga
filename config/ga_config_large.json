@@ -1,0 +1,48 @@
+{
+  "instance_type": "large",
+  "description": "Configuration for large instances (≥200k books or many libs)",
+  "population_size": 120,
+  "generations": 500,
+  "time_limit_sec": 1500,
+  "mutation": {
+    "initial_prob": 0.6,
+    "final_prob": 0.25,
+    "adaptation_type": "fitness_based",
+    "decay_factor": 0.95,
+    "increase_factor": 1.1,
+    "stagnation_threshold": 0.001
+  },
+  "crossover": {
+    "rate": 0.8,
+    "types": ["order_preserving", "order_crossover"],
+    "weights": [0.4, 0.6]
+  },
+  "selection": {
+    "tournament_size": 10,
+    "methods": ["tournament", "roulette", "rank"],
+    "weights": [3.0, 2.0, 1.0]
+  },
+  "immigration": {
+    "initial_frac": 0.1,
+    "max_frac": 0.3,
+    "stagnation_multiplier": 1.5,
+    "stagnation_threshold": 6,
+    "diversity_threshold": 0.15
+  },
+  "local_search": {
+    "initial_tweak_steps": 3,
+    "final_tweak_steps": 1,
+    "adaptation_schedule": "linear_decay"
+  },
+  "steady_state": {
+    "ratio": 0.6,
+    "switch_generation": 300,
+    "switch_time_ratio": 0.4
+  },
+  "diversity": {
+    "enabled": true,
+    "measurement_interval": 3,
+    "min_threshold": 0.15,
+    "trigger_immigration": true
+  }
+}

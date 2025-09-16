@@ -1,0 +1,19 @@
+# Enhanced Genetic Algorithm for Book Scanning
+# Core dependencies for the enhanced system
+
+# No external dependencies required for core functionality
+# The system uses only Python standard library modules:
+# - json (configuration management)
+# - csv (results tracking)
+# - time (timing and timestamps)
+# - random (genetic algorithm operations)
+# - os (file operations)
+# - sys (command line arguments)
+# - copy (solution copying)
+# - heapq (priority queue operations)
+
+# Optional dependencies for GUI validator (if needed):
+# PyQt6>=6.0.0
+
+# Note: The enhanced system is designed to work with Python 3.6+
+# using only standard library modules for maximum compatibility
